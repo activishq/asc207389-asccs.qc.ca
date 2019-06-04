@@ -1,0 +1,41 @@
+/*!
+	Theme Name: WordPress + Elementor
+	Theme URI: http://activis.ca
+	Author: Activis, votre agence web
+	Author URI: http://activis.ca
+	Description: Official WordPress Boilerplate for Elementor by Activis
+	Version: 3.1.0
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain: activis
+*/
+
+/* Styles
+   ========================================================================== */
+
+// Helpers
+@import "helpers/mixins";
+
+// Variables
+@import "reset/variables";
+
+// Base CSS (Based on Normalize)
+@import "reset/reset";
+
+// Comments
+@import "reset/comments";
+
+// Forms/
+@import "reset/forms";
+
+// Table
+@import "reset/table";
+
+// List
+@import "reset/list";
+
+// WordPress
+@import "reset/wordpress";
+
+// Custom Code
+@import "custom/custom";
