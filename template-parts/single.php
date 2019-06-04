@@ -12,32 +12,46 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <main id="main" <?php post_class( 'site-main' ); ?> role="main">
 
-<?php 
-	$author = get_the_author(); 
-	$featured_img_url = get_the_post_thumbnail_url($post->ID, 'full'); 
-	$extrait = get_field("extrait");
-?> 
-
 	<div class="page-content">
 		<?php the_content(); ?>
 	</div>
 
 </main>
+<?php 
+	$author = get_the_author(); 
+	$featured_img_url = get_the_post_thumbnail_url($post->ID, 'full'); 
+	$date_modified = date("Y-m-d", get_post_modified_time());
+	$extrait = get_field("extrait");
+	$lien_page = get_permalink();
+	$main_logo = get_home_url()."/wp-content/uploads/2019/05/Logo_ASCCS.svg";
+?> 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
+  "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "<?php echo $lien_page; ?>"
+  },
   "headline": "<?php echo get_the_title(); ?>",
   "image": [
     "<?php echo $featured_img_url; ?>"
    ],
   "datePublished": "<?php echo get_the_date(); ?>",
-  "dateModified": "<?php echo get_post_modified_time() ?>",
+  "dateModified": "<?php echo $date_modified; ?>",
   "author": {
     "@type": "Person",
     "name": "<?php echo $author ?>"
   },
-  "description": "<?php echo $extrait ?>"
+   "publisher": {
+    "@type": "Organization",
+    "name": "Association sportive et communautaire du Centre Sud",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "<?php echo $main_logo; ?>"
+    }
+  },
+  "description": "<?php echo $extrait; ?>"
 }
 </script>
 
