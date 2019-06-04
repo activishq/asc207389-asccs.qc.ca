@@ -18,12 +18,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </main>
 <?php 
+	// Bloc pour les données structurées
 	$author = get_the_author(); 
 	$featured_img_url = get_the_post_thumbnail_url($post->ID, 'full'); 
 	$date_modified = date("Y-m-d", get_post_modified_time());
 	$extrait = get_field("extrait");
 	$lien_page = get_permalink();
-	$main_logo = get_home_url()."/wp-content/uploads/2019/05/Logo_ASCCS.svg";
+	$main_logo = get_home_url()."/wp-content/uploads/2019/06/structured_data_reduce_logo.png";
 ?> 
 <script type="application/ld+json">
 {
@@ -46,7 +47,11 @@ if ( ! defined( 'ABSPATH' ) ) {
    "publisher": {
     "@type": "Organization",
     "name": "Association sportive et communautaire du Centre Sud",
-   },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "<?php echo $main_logo; ?>"
+    }
+  },
   "description": "<?php echo $extrait; ?>"
 }
 </script>
