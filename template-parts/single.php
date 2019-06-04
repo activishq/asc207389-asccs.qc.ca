@@ -46,11 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
    "publisher": {
     "@type": "Organization",
     "name": "Association sportive et communautaire du Centre Sud",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "<?php echo $main_logo; ?>"
-    }
-  },
+   },
   "description": "<?php echo $extrait; ?>"
 }
 </script>
