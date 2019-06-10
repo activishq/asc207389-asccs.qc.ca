@@ -193,3 +193,5 @@ if ( ! function_exists( 'activis_footer_js' ) ) {
 		}
 	}
 }
+
+add_filter('wpseo_json_ld_output', 'disable_yoast_schema_data', 10, 1);
