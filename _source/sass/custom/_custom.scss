@@ -14,8 +14,8 @@ pre {
 
 /* ACTCOPY shortcode
  ========================================================================== */
-$actcopy_primary: #333333;
-$actcopy_secondary: #00b6ff;
+$actcopy_primary: #8a8a8a;
+$actcopy_secondary: #e51937;
 .actcopy {
 	display: flex;
 	flex-flow: row wrap;
@@ -51,4 +51,11 @@ $actcopy_secondary: #00b6ff;
  			}
  		}
  	}
+}
+
+.footer a:hover {
+	color: #e51937;
+}
+.copyright a:hover {
+	color: #ffffff;
 }

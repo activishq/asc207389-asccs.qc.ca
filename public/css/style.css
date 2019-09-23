@@ -893,7 +893,7 @@ pre.debug {
   -ms-flex-pack: end;
   justify-content: flex-end;
   font-size: 11px;
-  color: #333333;
+  color: #8a8a8a;
 }
 
 body[data-elementor-device-mode="mobile"] .actcopy {
@@ -910,7 +910,7 @@ body[data-elementor-device-mode="mobile"] .actcopy {
 
 .actcopy svg .cls-1, .actcopy svg .cls-2 {
   fill: white;
-  stroke: #333333;
+  stroke: #8a8a8a;
   stroke-miterlimit: 10;
   stroke-width: 0.75px;
   stroke-linecap: square;
@@ -920,8 +920,16 @@ body[data-elementor-device-mode="mobile"] .actcopy {
 }
 
 .actcopy:hover svg .cls-1, .actcopy:hover svg .cls-2 {
-  fill: #00b6ff;
+  fill: #e51937;
   stroke: white;
+}
+
+.footer a:hover {
+  color: #e51937;
+}
+
+.copyright a:hover {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
