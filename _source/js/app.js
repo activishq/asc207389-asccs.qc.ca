@@ -64,6 +64,23 @@
 				});
 				new activis_submitControllerEvent();
 			}
+
+			// ElementorProForm
+			window.dataLayer = window.dataLayer || [];
+
+			if( $('.elementor-widget-form').length > 0 ){
+				$( document ).on( 'submit_success', function( event, response ){
+					if ( event.target.name == 'Infolettre' ) {
+						dataLayer.push({
+							'event': 'gaEvent',
+							'eventCategory' : 'Form',
+							'eventAction': 'Submit',
+							'eventLabel': 'Infolettre'
+						});
+						console.log('Sending unicorns along your way, Google.');
+					}
+				});
+			}
 		},
 
 		example: function() {
