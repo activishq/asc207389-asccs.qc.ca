@@ -867,6 +867,125 @@ li {
   /* Above WP toolbar. */
 }
 
+/* redux
+========================================================================== */
+/******************************/
+/******** NINJA FORM  *********/
+/******************************/
+.nf-form-cont h2 {
+  font-size: 28px;
+  color: #333;
+  font-weight: 600;
+}
+
+.nf-form-cont h3 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.nf-form-cont h4 {
+  font-size: 22px;
+  color: #333;
+  font-weight: 600;
+}
+
+.nf-form-cont h5 {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.nf-form-cont h6 {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.label-right .checkbox-wrap .nf-field-label {
+  width: 100% !important;
+}
+
+.nf-form-cont input[type="text"], input[type="date"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], select, textarea {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+  background-color: #f2f2f2;
+}
+
+.nf-form-cont button, .nf-form-cont [type="submit"], .nf-form-cont [type="button"] {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background-color: #e51937;
+  border-radius: 0;
+  border: none;
+  padding: 15px 40px;
+}
+
+.nf-form-cont button:hover, .nf-form-cont [type="submit"]:hover, .nf-form-cont [type="button"]:hover {
+  background-color: #333;
+}
+
+.nf-field-element select {
+  height: 37px !important;
+}
+
+.list-radio-wrap .nf-field-element li input {
+  margin-top: 0 !important;
+}
+
+/******************************/
+/******************************/
+/******************************/
+.alignleft {
+  float: left;
+  padding: 0 15px 0 0;
+  margin: 0;
+}
+
+.alignright {
+  float: left;
+  padding: 0 0 0 15px;
+  margin: 0;
+}
+
+a {
+  color: #e51937;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+p a {
+  color: #e51937;
+}
+
+.elementor-share-buttons--shape-circle .elementor-share-btn {
+  border-radius: 0;
+}
+
+.page-numbers:not(.dots) {
+  background: #e51937;
+  padding: 5px 10px;
+}
+
+.page-numbers:not(.dots):hover {
+  background: #444444;
+}
+
+.page-numbers:not(.dots).current:hover {
+  background: #e51937;
+}
+
+.list-checkbox-wrap .nf-field-element li input, .list-radio-wrap .nf-field-element li input {
+  margin-top: 0 !important;
+}
+
 /* Custom style
 ========================================================================== */
 pre.debug {
