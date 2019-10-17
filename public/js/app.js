@@ -57,7 +57,42 @@
 								'event': 'gaEvent',
 								'eventCategory' : 'Form',
 								'eventAction': 'Submit',
-								'eventLabel': 'Contact Me'
+								'eventLabel': 'Formulaire de contact'
+							});
+						} else if( response[ 'data' ][ 'form_id' ] == '2' ){
+							dataLayer.push({
+								'event': 'gaEvent',
+								'eventCategory' : 'Form',
+								'eventAction': 'Submit',
+								'eventLabel': 'Location de salle'
+							});
+						} else if( response[ 'data' ][ 'form_id' ] == '3' ){
+							dataLayer.push({
+								'event': 'gaEvent',
+								'eventCategory' : 'Form',
+								'eventAction': 'Submit',
+								'eventLabel': 'Fêtes denfants'
+							});
+						} else if( response[ 'data' ][ 'form_id' ] == '4' ){
+							dataLayer.push({
+								'event': 'gaEvent',
+								'eventCategory' : 'Form',
+								'eventAction': 'Submit',
+								'eventLabel': 'Cours privés de natation'
+							});
+						} else if( response[ 'data' ][ 'form_id' ] == '5' ){
+							dataLayer.push({
+								'event': 'gaEvent',
+								'eventCategory' : 'Form',
+								'eventAction': 'Submit',
+								'eventLabel': 'Cours privés de musique'
+							});
+						} else if( response[ 'data' ][ 'form_id' ] == '6' ){
+							dataLayer.push({
+								'event': 'gaEvent',
+								'eventCategory' : 'Form',
+								'eventAction': 'Submit',
+								'eventLabel': 'Devenez Bénévole'
 							});
 						}
 					},
