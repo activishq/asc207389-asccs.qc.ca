@@ -45,7 +45,7 @@
 
 			// tagmanager-ninjaform
 			window.dataLayer = window.dataLayer || [];
-			
+
 			if( $('.nf-form-cont').length > 0 ){
 				var activis_submitControllerEvent = Marionette.Object.extend( {
 					initialize: function() {
