@@ -53,43 +53,44 @@
 					},
 
 					actionSubmit: function( response ) {
+						console.log(response);
 						// Set the form ID here and fill data
-						if( response[ 'data' ][ 'form_id' ] == '1' ){
+						if( response[ 'data' ][ 'form_id' ] == '1' || response[ 'data' ][ 'form_id' ] == '1_1' ){
 							dataLayer.push({
 								'event': 'gaEvent',
 								'eventCategory' : 'Form',
 								'eventAction': 'Submit',
 								'eventLabel': 'Formulaire de contact'
 							});
-						} else if( response[ 'data' ][ 'form_id' ] == '2' ){
+						} else if( response[ 'data' ][ 'form_id' ] == '2' || response[ 'data' ][ 'form_id' ] == '2_1' ){
 							dataLayer.push({
 								'event': 'gaEvent',
 								'eventCategory' : 'Form',
 								'eventAction': 'Submit',
 								'eventLabel': 'Location de salle'
 							});
-						} else if( response[ 'data' ][ 'form_id' ] == '3' ){
+						} else if( response[ 'data' ][ 'form_id' ] == '3' || response[ 'data' ][ 'form_id' ] == '3_1' ){
 							dataLayer.push({
 								'event': 'gaEvent',
 								'eventCategory' : 'Form',
 								'eventAction': 'Submit',
 								'eventLabel': 'Fêtes denfants'
 							});
-						} else if( response[ 'data' ][ 'form_id' ] == '4' ){
+						} else if( response[ 'data' ][ 'form_id' ] == '4' || response[ 'data' ][ 'form_id' ] == '4_1' ){
 							dataLayer.push({
 								'event': 'gaEvent',
 								'eventCategory' : 'Form',
 								'eventAction': 'Submit',
 								'eventLabel': 'Cours privés de natation'
 							});
-						} else if( response[ 'data' ][ 'form_id' ] == '5' ){
+						} else if( response[ 'data' ][ 'form_id' ] == '5' || response[ 'data' ][ 'form_id' ] == '5_1' ){
 							dataLayer.push({
 								'event': 'gaEvent',
 								'eventCategory' : 'Form',
 								'eventAction': 'Submit',
 								'eventLabel': 'Cours privés de musique'
 							});
-						} else if( response[ 'data' ][ 'form_id' ] == '6' ){
+						} else if( response[ 'data' ][ 'form_id' ] == '6' || response[ 'data' ][ 'form_id' ] == '6_1' ){
 							dataLayer.push({
 								'event': 'gaEvent',
 								'eventCategory' : 'Form',
@@ -103,7 +104,6 @@
 			}
 
 			// ElementorProForm
-			window.dataLayer = window.dataLayer || [];
 
 			if( $('.elementor-widget-form').length > 0 ){
 				$( document ).on( 'submit_success', function( event, response ){
