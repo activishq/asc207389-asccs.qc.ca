@@ -95,8 +95,6 @@ if ( ! function_exists( 'activis_init_role' ) ) :
 			'gravityforms_system_status' => true,
 			'gravityforms_logging' => true,
 
-			'nf_sub' => true,
-
 			// WooCommerce
 			'manage_woocommerce' => true,
 			'view_woocommerce_reports' => true,
