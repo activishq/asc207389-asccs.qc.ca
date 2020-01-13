@@ -95,6 +95,15 @@ if ( ! function_exists( 'activis_init_role' ) ) :
 			'gravityforms_system_status' => true,
 			'gravityforms_logging' => true,
 
+			// Ninjaform
+			'ninja_forms_admin_parent_menu_capabilities' => true,
+			'ninja_forms_admin_parent_menu_capabilities'  => true,
+			'ninja_forms_admin_submissions_capabilities'  => true,
+			'ninja_forms_admin_import_export_capabilities'  => true,
+			'ninja_forms_admin_settings_capabilities'  => true,
+			'ninja_forms_admin_status_capabilities'  => true,
+			'ninja_forms_admin_extend_capabilities'  => true,
+
 			// WooCommerce
 			'manage_woocommerce' => true,
 			'view_woocommerce_reports' => true,
