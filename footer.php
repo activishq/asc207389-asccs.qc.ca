@@ -77,7 +77,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
                 weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
             };
             
-            dateObject.pikaday.setMinDate( new Date( 'December 21, 1980' ) );
+            dateObject.pikaday.setMinDate( new Date( 'December 21, 1930' ) );
         }
     }));
 });
