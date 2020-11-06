@@ -65,8 +65,18 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
         },
 
         modifyDatepicker: function( dateObject, fieldModel ) {
-            // dateObject.pikaday.setDate( '04/11/2016' );
-            // dateObject.pikaday.gotoYear( '2017' );
+
+            /*
+         * This is how we modify the labels on our date picker calendar.
+         */
+             dateObject.pikaday._o.i18n = {
+                previousMonth : 'Le mois avant',
+                nextMonth     : 'Le mois après',
+                months        : ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Décembre'],
+                weekdays      : ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+                weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+            };
+            
             dateObject.pikaday.setMinDate( new Date( 'December 21, 1980' ) );
         }
     }));
