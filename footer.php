@@ -56,4 +56,20 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
   "description": "<?php echo $extrait; ?>"
 }
 </script>
+<script type="text/javascript">
+  jQuery( document ).ready( function() {
+    new(Marionette.Object.extend( {
+
+        initialize: function() {
+            this.listenTo( Backbone.Radio.channel( 'pikaday' ), 'init', this.modifyDatepicker );
+        },
+
+        modifyDatepicker: function( dateObject, fieldModel ) {
+            // dateObject.pikaday.setDate( '04/11/2016' );
+            // dateObject.pikaday.gotoYear( '2017' );
+            dateObject.pikaday.setMinDate( new Date( 'December 21, 1980' ) );
+        }
+    }));
+});
+</script>
 </html>
