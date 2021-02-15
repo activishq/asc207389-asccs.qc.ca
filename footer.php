@@ -56,4 +56,30 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
   "description": "<?php echo $extrait; ?>"
 }
 </script>
+<script type="text/javascript">
+  jQuery( document ).ready( function() {
+    new(Marionette.Object.extend( {
+
+        initialize: function() {
+            this.listenTo( Backbone.Radio.channel( 'pikaday' ), 'init', this.modifyDatepicker );
+        },
+
+        modifyDatepicker: function( dateObject, fieldModel ) {
+
+            /*
+         * This is how we modify the labels on our date picker calendar.
+         */
+             dateObject.pikaday._o.i18n = {
+                previousMonth : 'Le mois avant',
+                nextMonth     : 'Le mois après',
+                months        : ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Décembre'],
+                weekdays      : ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+                weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+            };
+            
+            dateObject.pikaday.setMinDate( new Date( 'January 1, 1930' ) );
+        }
+    }));
+});
+</script>
 </html>
