@@ -7,11 +7,11 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+  exit; // Exit if accessed directly
 }
 
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) {
-	get_template_part( 'template-parts/footer' );
+  get_template_part( 'template-parts/footer' );
 }
 ?>
 
@@ -19,13 +19,13 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 
 </body>
 <?php 
-	// Bloc pour les données structurées
-	$author = get_the_author(); 
-	$featured_img_url = get_the_post_thumbnail_url($post->ID, 'full'); 
-	$date_modified = date("Y-m-d", get_post_modified_time());
-	$extrait = get_field("extrait");
-	$lien_page = get_permalink();
-	$main_logo = get_home_url()."/wp-content/uploads/2019/06/structured_data_reduce_logo.png";
+  // Bloc pour les données structurées
+  $author = get_the_author(); 
+  $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full'); 
+  $date_modified = date("Y-m-d", get_post_modified_time());
+  $extrait = get_field("extrait");
+  $lien_page = get_permalink();
+  $main_logo = get_home_url()."/wp-content/uploads/2019/06/structured_data_reduce_logo.png";
 ?> 
 <script type="application/ld+json">
 {
@@ -77,7 +77,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
                 weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
             };
             
-            dateObject.pikaday.setMinDate( new Date( 'January 1, 1930' ) );
+           dateObject.set("minDate", new Date());
         }
     }));
 });
