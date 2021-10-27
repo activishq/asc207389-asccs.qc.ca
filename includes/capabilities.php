@@ -32,7 +32,7 @@ if ( ! function_exists( 'activis_init_role' ) ) :
 			'remove_users' => true,
 			'edit_dashboard' => true,
 			'customize' => true,
-
+            'edit_theme_options' =>true,
 			// Editor
 			'moderate_comments' => true,
 			'manage_categories' => true,
@@ -183,7 +183,30 @@ if ( ! function_exists( 'activis_init_role' ) ) :
 
 endif;
 
+function hide_menu() {
+    $user = wp_get_current_user();
 
+    // Check if the current user is an Editor
+
+    if ( in_array( 'client', (array) $user->roles ) ) {
+
+
+        // Hide the Themes page
+        remove_submenu_page( 'themes.php', 'themes.php' );
+
+        // Hide the Widgets page
+        remove_submenu_page( 'themes.php', 'widgets.php' );
+
+        // Hide the Customize page
+        remove_submenu_page( 'themes.php', 'customize.php' );
+
+        // Remove Customize from the Appearance submenu
+        global $submenu;
+        unset($submenu['themes.php'][6]);
+    }
+}
+
+add_action('admin_menu', 'hide_menu', 10);
 /* ACTIVIS_EDITABLE_ROLES
 ================================================== */
 if ( ! function_exists( 'activis_editable_roles' ) ) :
@@ -193,7 +216,7 @@ if ( ! function_exists( 'activis_editable_roles' ) ) :
 		if ( $user = wp_get_current_user() ) :
 
 			if( !in_array( 'administrator', $user->roles ) ) :
-				   
+
 				  unset( $roles[ 'administrator' ] );
 
 			endif;
@@ -218,15 +241,15 @@ if ( ! function_exists( 'activis_pre_user_query' ) ) :
 		if ( $user = wp_get_current_user() ) :
 
 			if( !in_array( 'administrator', $user->roles ) ) :
-				   
+
 				global $wpdb;
 
 				$user_search->query_where = str_replace(
-					'WHERE 1=1', 
+					'WHERE 1=1',
 					"WHERE 1=1 AND {$wpdb->users}.ID IN (
 						SELECT {$wpdb->usermeta}.user_id FROM $wpdb->usermeta 
 							WHERE {$wpdb->usermeta}.meta_key = '{$wpdb->prefix}capabilities'
-							AND {$wpdb->usermeta}.meta_value NOT LIKE '%administrator%')", 
+							AND {$wpdb->usermeta}.meta_value NOT LIKE '%administrator%')",
 					$user_search->query_where
 				);
 
